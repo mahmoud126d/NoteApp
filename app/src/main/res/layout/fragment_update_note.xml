@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ECEFF1"
+    android:background="@drawable/border"
     tools:context=".UpdateNoteFragment">
 
     <EditText
@@ -22,20 +22,24 @@
 
     <Button
         android:id="@+id/btn_update"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginTop="56dp"
         android:text="@string/update"
+        app:icon="@drawable/update"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_note_edit" />
 
     <Button
         android:id="@+id/btn_cancel_update"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
         android:text="@string/cancel"
+        app:icon="@drawable/cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_update"
         app:layout_constraintTop_toBottomOf="@+id/et_note_edit" />

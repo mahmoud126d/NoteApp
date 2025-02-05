@@ -17,7 +17,6 @@ import android.widget.EditText;
 
 import com.example.noteapp.db.Note;
 
-
 public class UpdateNoteFragment extends Fragment {
     Context context;
     EditText noteText;
@@ -25,9 +24,11 @@ public class UpdateNoteFragment extends Fragment {
     Button updateButton;
     Button cancelButton;
     Communicator communicator;
+
     public UpdateNoteFragment() {
         // Required empty public constructor
     }
+
     public UpdateNoteFragment(Context context, Note note) {
         // Required empty public constructor
         this.context = context;
@@ -61,7 +62,7 @@ public class UpdateNoteFragment extends Fragment {
         updateButton = view.findViewById(R.id.btn_update);
         cancelButton = view.findViewById(R.id.btn_cancel_update);
         noteText.setText(note.getNoteTitle());
-        updateButton.setOnClickListener(v ->{
+        updateButton.setOnClickListener(v -> {
             note.setNoteTitle(noteText.getText().toString());
             communicator.updateNote(note);
             closeFragment();
@@ -71,7 +72,8 @@ public class UpdateNoteFragment extends Fragment {
             closeFragment();
         });
     }
-    private void closeFragment(){
+
+    private void closeFragment() {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.remove(this).commit();

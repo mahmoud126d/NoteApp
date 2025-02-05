@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#CFD8DC"
+    android:background="@drawable/border"
     tools:context=".AddNoteFragment">
 
     <TextView
@@ -27,8 +27,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:fontFamily="sans-serif"
         android:hint="@string/enter_your_note_here"
-        android:inputType="textMultiLine"
+        android:inputType="text|textMultiLine"
         android:minHeight="48dp"
         android:padding="12dp"
         android:textColor="#000000"
@@ -41,6 +42,7 @@
 
     <Button
         android:id="@+id/btn_save"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -48,8 +50,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="24dp"
         android:text="@string/save"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textStyle="bold"
+        app:icon="@drawable/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_cancel"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +61,7 @@
 
     <Button
         android:id="@+id/btn_cancel"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -65,8 +69,10 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="24dp"
         android:text="@string/cancel"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
+        android:textColorLink="#181818"
         android:textStyle="bold"
+        app:icon="@drawable/cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_save"
